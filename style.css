@@ -83,9 +83,9 @@ width:630px;
 height:630px;
 border-radius:20%;
 object-fit:cover;
-border:5px solid #f8fcf9;
+border:20px solid #f8fcf9;
 margin-bottom:5px;
 }
 
-h1{color:#fc3927}
-p{color:#444;margin-top:10px}
+h1{color:#fc3927;font-size: 3rem;}
+p{color:#444;margin-top:10px;font-size: 2rem;}
