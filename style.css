@@ -1,0 +1,91 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+body{
+height:100vh;
+overflow:hidden;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.animated-bg{
+position:fixed;
+inset:0;
+background:linear-gradient(270deg,#ff6f61,#ffcc70,#845ec2);
+background-size:600% 600%;
+animation:gradient 15s ease infinite;
+z-index:-4;
+}
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.balloons span, .glitters span{
+position:absolute;
+top:-10%;
+animation: fall linear infinite;
+}
+
+.balloons span{
+width:40px;
+height:55px;
+border-radius:50% 50% 45% 45%;
+background:var(--c);
+box-shadow:inset -5px -10px rgba(0,0,0,.15);
+}
+
+.balloons span::after{
+content:"";
+position:absolute;
+width:2px;
+height:25px;
+background:#fff;
+left:50%;
+top:100%;
+}
+
+.glitters span{
+width:6px;
+height:6px;
+background:rgba(255,255,255,0.9);
+border-radius:50%;
+box-shadow:0 0 10px white;
+}
+
+@keyframes fall{
+0%{transform:translateY(0)}
+100%{transform:translateY(120vh)}
+}
+
+.card{
+background:rgba(133, 189, 249, 0.9);
+padding:50px;
+border-radius:25px;
+text-align:center;
+z-index:2;
+box-shadow:0 25px 50px rgba(0,0,0,.3);
+animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+}
+
+.profile{
+width:330px;
+height:330px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #f8fcf9;
+margin-bottom:10px;
+}
+
+h1{color:#fc3927}
+p{color:#444;margin-top:10px}
